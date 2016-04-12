@@ -9,6 +9,8 @@
 		API into his/her applications more easily. 
 */
 
+namespace InboxFirst;
+
 # Load Configuration file, if it exists
 include("config.php");
 
@@ -28,5 +30,7 @@ require("includes/MailingLists.php");
 require("includes/CustomFields.php");
 require("includes/Campaigns.php");
 require("includes/Users.php");
+require("includes/InboxFirstRequest.php");
 
-# Get a list of Mailing Lists
+//Subscribers\create_subscriber(2677, "test@test.com");
+
