@@ -22,10 +22,11 @@ if ( ! (defined(API_KEY) && defined(ORG_ID)) )
 }
 
 # Load the rest of the modules
+require("includes/Utilities.php");
 require("includes/Subscribers.php");
 require("includes/MailingLists.php");
 require("includes/CustomFields.php");
 require("includes/Campaigns.php");
 require("includes/Users.php");
 
-# Get a list of subscribers
+# Get a list of Mailing Lists
