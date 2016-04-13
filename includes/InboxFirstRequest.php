@@ -54,6 +54,7 @@ class InboxFirstRequest {
 		// display result
 		echo $curl_response;
 	
+	}
 	
 	public static function get_request($url, $args)
 	{
@@ -61,6 +62,8 @@ class InboxFirstRequest {
 		
 		# Stringify arrays for transport
 		$fields_string = http_build_query($args);
+		
+		echo $fields_string;
 		
 		# Get header fields
 		$fields_strlen = strlen($fields_string);
