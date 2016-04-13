@@ -33,4 +33,5 @@ require("includes/Users.php");
 require("includes/InboxFirstRequest.php");
 
 //Subscribers\create_subscriber(2677, "test@test.com");
+//Subscribers\get_subscribers(2677);
 

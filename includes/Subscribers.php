@@ -20,5 +20,21 @@ function create_subscriber($mailing_list_id, $email, $custom_fields=null, $statu
 	);
 	
 	# Send the request
-	\InboxFirst\InboxFirstRequest::send_request($url, $fields);
+	\InboxFirst\InboxFirstRequest::post_request($url, $fields);
+}
+
+function get_subscribers($mailing_list_id, $page_num=null, $per_page=500, $page_token=null)
+{
+	# set up service url
+	$url = "http://if.inboxfirst.com/ga/api/v2/mailing_lists/" . $mailing_list_id . "/subscribers";
+
+	# Set up post fields
+	$fields = array(
+			'page' => $page_num,
+			'page_token' => $page_token,
+			'per_page' => $per_page
+	);
+	
+	# Send the request
+	\InboxFirst\InboxFirstRequest::post_request($url, $fields);
 }
