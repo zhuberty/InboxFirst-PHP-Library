@@ -38,32 +38,33 @@ class InboxFirstRequest {
 		$curl_response = curl_exec($curl);
 		
 		// Check if any error occurred
-		if(!curl_errno($curl))
+		if (DEBUGGING)
 		{
-			$info = curl_getinfo($curl);
+			if(!curl_errno($curl))
+			{
+				$info = curl_getinfo($curl);
 
-			echo 'Took ' . $info['total_time'] . ' seconds to send a request to ' . $info['url'];
-			echo "<br />HTTP CODE: " . $info['http_code'];
-		}else {
-			echo curl_errno($curl) . ": " . curl_error($curl);
+				echo 'Took ' . $info['total_time'] . ' seconds to send a request to ' . $info['url'];
+				echo "<br />HTTP CODE: " . $info['http_code'];
+			}else {
+				echo curl_errno($curl) . ": " . curl_error($curl);
+			}
 		}
 
 		// close connection
 		curl_close($curl);
 
 		// display result
-		echo $curl_response;
+		return json_decode($curl_response);
 	
 	}
 	
-	public static function get_request($url, $args)
+	public static function get_request($url, $args=array())
 	{
 		$curl = curl_init($url);
 		
 		# Stringify arrays for transport
 		$fields_string = http_build_query($args);
-		
-		echo $fields_string;
 		
 		# Get header fields
 		$fields_strlen = strlen($fields_string);
@@ -79,20 +80,24 @@ class InboxFirstRequest {
 		$curl_response = curl_exec($curl);
 		
 		// Check if any error occurred
-		if(!curl_errno($curl))
+		if (DEBUGGING)
 		{
-			$info = curl_getinfo($curl);
+			if(!curl_errno($curl))
+			{
+				$info = curl_getinfo($curl);
 
-			echo 'Took ' . $info['total_time'] . ' seconds to send a request to ' . $info['url'];
-			echo "<br />HTTP CODE: " . $info['http_code'];
-		}else {
-			echo curl_errno($curl) . ": " . curl_error($curl);
+				echo 'Took ' . $info['total_time'] . ' seconds to send a request to ' . $info['url'];
+				echo "<br />HTTP CODE: " . $info['http_code'];
+			}else {
+				echo curl_errno($curl) . ": " . curl_error($curl);
+			}
 		}
+		
 
 		// close connection
 		curl_close($curl);
 
 		// display result
-		echo $curl_response;
+		return json_decode($curl_response);
 	}
 }

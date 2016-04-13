@@ -4,7 +4,7 @@ namespace InboxFirst\Subscribers;
 function create_subscriber($mailing_list_id, $email, $custom_fields=null, $status="active")
 {
 	# set up service url
-	$url = "http://if.inboxfirst.com/ga/api/v2/mailing_lists/" . $mailing_list_id . "/subscribers";
+	$url = URL_ROOT . "mailing_lists/" . $mailing_list_id . "/subscribers";
 
 	# Create subscriber
 	$subscriber = array();
@@ -20,13 +20,13 @@ function create_subscriber($mailing_list_id, $email, $custom_fields=null, $statu
 	);
 	
 	# Send the request
-	\InboxFirst\InboxFirstRequest::post_request($url, $fields);
+	return \InboxFirst\InboxFirstRequest::post_request($url, $fields);
 }
 
 function get_subscribers($mailing_list_id, $page_num=null, $per_page=500, $page_token=null)
 {
 	# set up service url
-	$url = "http://if.inboxfirst.com/ga/api/v2/mailing_lists/" . $mailing_list_id . "/subscribers";
+	$url = URL_ROOT .  "mailing_lists/" . $mailing_list_id . "/subscribers";
 
 	# Set up post fields
 	$args = array(
@@ -36,5 +36,5 @@ function get_subscribers($mailing_list_id, $page_num=null, $per_page=500, $page_
 	);
 	
 	# Send the request
-	\InboxFirst\InboxFirstRequest::get_request($url, $args);
+	return \InboxFirst\InboxFirstRequest::get_request($url, $args);
 }

@@ -32,6 +32,14 @@ require("includes/Campaigns.php");
 require("includes/Users.php");
 require("includes/InboxFirstRequest.php");
 
-//Subscribers\create_subscriber(2677, "test@test.com");
-//Subscribers\get_subscribers(2677);
+# TESTING GROUNDS
+echo "<html>";
+echo "<body>";
+
+//Subscribers\create_subscriber(2677, "test1@test.com", array('first_name' => 'Zach', 'last_name' => 'Huberty'));
+prettyDump(Subscribers\get_subscribers(2677));
+prettyDump(MailingLists\get_lists());
+
+echo "</body>";
+echo "</html>";
 
