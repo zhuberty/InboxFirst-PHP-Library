@@ -39,9 +39,13 @@ echo "<body>";
 
 //Subscribers\create_subscriber(2677, "test1@test.com", array('first_name' => 'Zach', 'last_name' => 'Huberty'));
 //prettyDump(Subscribers\get_subscribers(2677));
+//prettyDump(CustomFields\get_custom_fields(2677));
 //prettyDump(MailingLists\get_lists());
 //prettyDump(Subscribers\get_subscriber(2677, 'test1@test.com'));
 //prettyDump(Subscribers\update_subscriber(2677, "test1@test.com", array('first_name' => 'Zachhh', 'last_name' => 'Huberty')));
+//prettyDump(CustomFields\create_custom_field(2677, 'test_field_3', 'boolean', 1));
+//prettyDump(CustomFields\update_custom_field(2677, 10068, 'test_field_3', 'boolean', 1));
+//prettyDump(CustomFields\delete_custom_field(2677, 10066));
 
 echo "</body>";
 echo "</html>";
