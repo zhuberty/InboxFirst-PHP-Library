@@ -33,14 +33,16 @@ require("includes/Users.php");
 require("includes/InboxFirstRequest.php");
 
 # TESTING GROUNDS
-/*
+
 echo "<html>";
 echo "<body>";
 
 //Subscribers\create_subscriber(2677, "test1@test.com", array('first_name' => 'Zach', 'last_name' => 'Huberty'));
 //prettyDump(Subscribers\get_subscribers(2677));
-prettyDump(MailingLists\get_lists());
+//prettyDump(MailingLists\get_lists());
+//prettyDump(Subscribers\get_subscriber(2677, 'zj.hubs@gmail.com'));
+prettyDump(Subscribers\update_subscriber(2677, "test1@test.com", array('first_name' => 'Zachhh', 'last_name' => 'Huberty')));
 
 echo "</body>";
 echo "</html>";
-*/
+

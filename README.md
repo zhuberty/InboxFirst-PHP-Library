@@ -1,4 +1,4 @@
-# InboxFirst-PHP-Library
+# InboxFirst PHP Library
 
 1. Include your InboxFirst API key and Organization ID in config.php
 
