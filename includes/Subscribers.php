@@ -1,4 +1,12 @@
 <?php
+/*
+Methods:
+	create_subscriber
+	get_subscriber
+	get_subscribers
+	update_subscriber
+*/
+
 namespace InboxFirst\Subscribers;
 
 function create_subscriber($mailing_list_id, $email, $custom_fields=null, $status="active")

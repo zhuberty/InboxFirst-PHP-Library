@@ -1,4 +1,8 @@
 <?php
+/*
+Methods:
+	prettyDump
+*/
 
 function prettyDump($obj)
 {

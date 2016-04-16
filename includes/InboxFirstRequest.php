@@ -1,5 +1,14 @@
 <?php
+/*
+Methods:
+	delete_request
+	get_request
+	post_request
+	put_request
+*/
+
 namespace InboxFirst;
+
 class InboxFirstRequest {
 	
 	public static function get_header_fields($content_length)

@@ -1,4 +1,12 @@
 <?php
+/*
+Methods:
+	create_custom_field
+	delete_custom_field
+	get_custom_fields
+	update_custom_field
+*/
+
 namespace InboxFirst\CustomFields;
 
 function get_custom_fields($mailing_list_id)

@@ -1,4 +1,9 @@
 <?php
+/*
+Methods:
+	get_lists
+*/
+
 namespace InboxFirst\MailingLists;
 
 function get_lists()
